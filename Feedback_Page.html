@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+
+   <style>
+
+    .navbar{
+        background-color:transparent;
+        /* text-decoration-color: black;*/
+        overflow: hidden;
+        height: 300px;
+        width: auto;
+    }
+
+    .navbar a{          
+        width: 100px;
+        color: black;
+        top:20px;
+        text-align: center;
+        
+        border: 30px;
+  
+        padding:100px 100px 30px 100px  ;
+        font-size:x-large;
+        text-decoration:none;
+        
+        font-family: var(--body-font-family),sans-serif;
+        font-weight: bold;
+    }
+
+    .navbar a:hover{
+        background-color: floralwhite;
+        color:rgb(46, 137, 167);
+
+    }
+
+    .navbar a:active{
+        background-color: indianred;
+        color: cornsilk;
+    }
+
+    .dropbtn {
+        background-color:transparent;
+        color: black;
+        padding:30px;
+        width:260px;
+        font-size:x-large;
+        border:none;
+        font-weight: bold;
+        font-family:var(--body-font-family),sans-serif;
+      }
+      
+    .dropdown {
+        position:relative;
+        display: inline-block;
+
+        
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        width:160px;
+
+        
+    }
+      
+    .dropdown-content a {
+        color: black;
+        padding: 12px 30px;
+        text-decoration: none;
+        display: block;
+        font-family:var(--body-font-family),sans-serif;
+    }
+      
+    .dropdown-content a:hover {background-color: #ddd; color: palevioletred;}
+      
+    .dropdown:hover .dropdown-content {display: block;}
+      
+    .dropdown:hover .dropbtn {background-color: floralwhite; color: palevioletred;}        .dropbtn {
+        background-color:transparent;
+        color: black;
+        padding:30px;
+        width:260px;
+        font-size:x-large;
+        border:none;
+        font-weight: bold;
+        font-family:var(--body-font-family),sans-serif;
+      }
+      
+    .dropdown {
+        position:relative;
+        display: inline-block;
+
+        
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        width:160px;
+
+        
+    }
+      
+    .dropdown-content a {
+        color: black;
+        padding: 12px 30px;
+        text-decoration: none;
+        display: block;
+        font-family:var(--body-font-family),sans-serif;
+    }
+      
+    .dropdown-content a:hover {background-color: #ddd; color: palevioletred;}
+      
+    .dropdown:hover .dropdown-content {display: block;}
+      
+    .dropdown:hover .dropbtn {background-color: floralwhite; color: palevioletred;}
+
+
+.box{
+margin: 5px;
+position: absolute; top: 100px; left: 500px;
+padding: 15px;
+/*background-image:url("https://i.pinimg.com/564x/99/09/b4/9909b4685084d3bb7a631d07fc138c8a.jpg");*/
+background-repeat: no-repeat;
+background: linear-gradient(108.85deg,#10355c 2.76%,#04020d);;
+font-size: larger;
+border-radius: 10px;
+color: white;
+
+}
+
+body{
+            background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/5654.jpg");
+          /*  https://free4kwallpapers.com/uploads/originals/2021/05/01/abstract-art-wallpaper.jpg*/
+            background-repeat: no-repeat;
+            background-size: 1525px 900px;
+           /* background: rgb(2,0,36);*/
+          /*  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(246,169,194,0.9794511554621849) 55%, rgba(0,212,255,1) 100%);*/
+        }
+        
+   </style>
+</head>
+<body>
+
+    <div class="navbar" >
+        <div class="hover">
+            <div class="dropdown">
+                <a href="Home_Page.html">
+                <button class="dropbtn" style="width:70px; text-align:center" >
+                    Home
+                </button>
+                </a>
+                 <div class="dropdown-content">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+                 </div>
+               </div>
+    <!-- <a href="Home_Page.html">Home</a> -->
+    <a href="Sign-Up_Page.html">SignUp</a>
+    <a href="login2.html">Login</a>
+    <a href="Feedback_Page.html">Feedback</a>
+    <a href="About_Us.html">About Us</a>
+    
+    </div>
+    </div>
+    
+    <div class="box">
+       
+        
+       <fieldset style="border-radius: 10px"; >
+       <!-- <legend><b> Feedback Form</b></legend>-->
+        <label for="text" >Name</label><br>
+        <input type="text" placeholder="Enter Name" size="45" name="name"><br><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" placeholder="xyz@gmail.com" size="45"><br><br><br>
+
+        <p>Rate our website(1-5):</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 1 || x > 5) {
+    text = "Input not valid";
+  } else {
+    text = "Submitted";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+
+    <!-- <label for="rating">Rating</label><br>
+    <input type="range" min="0" max="5" > -->
+            
+        <br><br>
+
+        <label for="msg" id="msg">Feedback</label><br>
+        <textarea id="msg" rows="10" cols="50" placeholder="Enter your feedback" size="45" ></textarea><br><br><br>
+        <div >
+            <p align="center">                           
+        <button type="submit" style="height:40px; width: 90px;" >Submit</button >
+          
+            </p>
+        </div>
+    </fieldset>
+   
+    </div> 
+
+    
+</body>
+</html>
